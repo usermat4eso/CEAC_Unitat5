@@ -6,37 +6,37 @@ import { getLink } from '../main';
 <template>
     <h1 class="heading">
         <fa-icon :icon="faFolderOpen" />
-        Choose a Quiz
-        <div class="chip">
-            <fa-icon :icon="faBookBookmark" />
-            {{ $route.params.category }}
+        Tria un Quiz
+        <div  style="display:none"  class="chip">
+           <fa-icon :icon="faFolderOpen" />
+            {{ $route.params.category }} 
         </div>
     </h1>
     <div class="wrapper-2col">
         <router-link :to="'/'" class="link-button">
             <fa-icon :icon="faCircleArrowLeft"></fa-icon>
-            Go back
+            Enrere
         </router-link>
         <a @click="combining = true" class="link-button" v-if="!combining" title="Display the questions from multiple quizzes at once, with question order randomized.">
             <fa-icon :icon="faLayerGroup"></fa-icon>
-            Combine quizzes
+            Combina quizzes
         </a>
         <a @click="combining = false" v-if="combining" class="link-button">
             <fa-icon :icon="faCircleStop"></fa-icon>
-            Stop combining
+            Sense combinar
         </a>
         <a @click="toggleAll()" v-if="combining" class="link-button" :title="added.length !== quizzes.length ? 'Select ' + quizzes.length + ' quizzes' : 'Deselect ' + added.length + ' quizzes'">
             <fa-icon :icon="faCheckDouble"></fa-icon>
-            {{ added.length !== quizzes.length ? "Select all" : "Select none" }}
+            {{ added.length !== quizzes.length ? "Selecciona tots" : "Selecciona ninguno" }}
         </a>
         <router-link :to="getLink(added, $props.quizzes)" class="link-button bold-link-button"
             v-if="combining && added.length > 0">
             <fa-icon :icon="faCheckCircle"></fa-icon>
-            Start {{ added.length }} quizzes
+            Comença {{ added.length }} quizzes
         </router-link>
         <a v-if="combining && added.length === 0" class="link-button disabled" title="You must select one or more quizzes to combine.">
             <fa-icon :icon="faCheckCircle"></fa-icon>
-            Start quizzes
+            Comença quizzes
         </a>
     </div>
     <div class="wrapper-4col" v-if="!combining">
@@ -86,7 +86,7 @@ export default {
 <style>
 .wrapper-4col {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(1, auto);
 }
 
 .wrapper-2col {

@@ -1,0 +1,72 @@
+{
+    "id": "correspondencia_entrada",
+    "displayName": "Correspondència d'entrada",
+    "questions": [
+        {
+            "number": 1,
+            "question": "Quina és la diferència principal entre una adreça postal i un apartat de correus?",
+            "choices": [
+                "L'adreça postal especifica una ubicació física, mentre que un apartat de correus és una bústia dins d'una oficina de correus.",
+                "L'apartat de correus s'utilitza només per enviaments internacionals.",
+                "Tots dos són bústies en oficines postals.",
+                "L'adreça postal només es fa servir per a empreses."
+            ],
+            "correct": 0
+        },
+        {
+            "number": 2,
+            "question": "Per què és important comprovar el contingut de la correspondència d'entrada durant la recollida?",
+            "choices": [
+                "Per destruir automàticament els documents antics.",
+                "Per verificar si hi ha informació important, errors o documents no desitjats.",
+                "Per decidir si la correspondència ha de ser enviada al destinatari sense revisió.",
+                "Per evitar duplicats en l'arxiu immediat."
+            ],
+            "correct": 1
+        },
+        {
+            "number": 3,
+            "question": "Tota la correspondència d'entrada ha de ser registrada?",
+            "choices": [
+                "Només es registra quan ho sol·licita l'empresa.",
+                "Només s'ha de registrar la correspondència important o oficial.",
+                "Sí, absolutament tota la correspondència ha de passar pel registre.",
+                "No cal registrar cap correspondència, només cal arxivar-la."
+            ],
+            "correct": 1
+        },
+        {
+            "number": 4,
+            "question": "Què significa que un número de registre sigui correlatiu?",
+            "choices": [
+                "Els números són aleatoris per facilitar la gestió.",
+                "Els números s'assignen seguint una seqüència ordenada per data o recepció.",
+                "S'assignen números basats en l'import del document.",
+                "Cada document rep un número assignat segons el departament que el rebi."
+            ],
+            "correct": 1
+        },
+        {
+            "number": 5,
+            "question": "Què s'ha de fer amb el material publicitari o la correspondència amb dades errònies?",
+            "choices": [
+                "Verificar si es pot retornar al remitent o notificar l'error abans de descartar-lo.",
+                "Guardar-lo indefinidament fins que es rebi una reclamació.",
+                "Arxivar-lo per si és necessari en el futur.",
+                "Tirar-lo immediatament al fem."
+            ],
+            "correct": 0
+        },
+        {
+            "number": 6,
+            "question": "En la fase de classificació, es pot obrir la correspondència que no va a nom de ningú concret?",
+            "choices": [
+                "Sí, es pot obrir sense restriccions.",
+                "No, s'ha de retornar automàticament.",
+                "No, tret que estigui marcat com a 'obertura general' o amb autorització.",
+                "Només es pot obrir després d'un període de temps sense recollida."
+            ],
+            "correct": 2
+        }
+    ]
+}

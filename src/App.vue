@@ -6,8 +6,9 @@ import githubLogoWhite from './assets/github-mark-white.svg';
 
 <template>
   <router-view :quizzes="quizzes"></router-view>
-  <p class="footer">
-    <hr />
+  <hr />
+  <p  style="display:none"  class="footer">
+    
     Made by
     <a href="https://github.com/FluxCapacitor2/" target="_blank" rel="noopener noreferrer">
       <img src="https://avatars.githubusercontent.com/u/31071265" class="inline" />
@@ -30,35 +31,14 @@ export default {
   data() {
     return {
       quizzes: [
-        { subject: "APES", name: "Chapter 1", id: "apes_ch1", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_1.json"), },
-        { subject: "APES", name: "Chapter 2", id: "apes_ch2", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_2.json"), },
-        { subject: "APES", name: "Chapter 3", id: "apes_ch3", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_3.json"), },
-        { subject: "APES", name: "Chapter 4", id: "apes_ch4", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_4.json"), },
-        { subject: "APES", name: "Chapter 5", id: "apes_ch5", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_5.json"), },
-        { subject: "APES", name: "Chapter 6", id: "apes_ch6", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_6.json"), },
-        { subject: "APES", name: "Chapter 7", id: "apes_ch7", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_7.json"), },
-        { subject: "APES", name: "Chapter 8", id: "apes_ch8", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_8.json"), },
-        { subject: "APES", name: "Chapter 9", id: "apes_ch9", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_9.json"), },
-        { subject: "APES", name: "Chapter 10", id: "apes_ch10", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_10.json"), },
-        { subject: "APES", name: "Chapter 11", id: "apes_ch11", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_11.json"), },
-        { subject: "APES", name: "Chapter 12", id: "apes_ch12", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_12.json"), },
-        { subject: "APES", name: "Chapter 13", id: "apes_ch13", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_13.json"), },
-        { subject: "APES", name: "Chapter 14", id: "apes_ch14", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_14.json"), },
-        { subject: "APES", name: "Chapter 15", id: "apes_ch15", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_15.json"), },
-        { subject: "APES", name: "Chapter 16", id: "apes_ch16", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_16.json"), },
-        { subject: "APES", name: "Chapter 17", id: "apes_ch17", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_17.json"), },
-        { subject: "APES", name: "Chapter 18", id: "apes_ch18", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_18.json"), },
-        { subject: "APES", name: "Chapter 19", id: "apes_ch19", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_19.json"), },
-        { subject: "APES", name: "Chapter 20", id: "apes_ch20", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_20.json"), },
-        { subject: "APES", name: "Chapter 21", id: "apes_ch21", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_21.json"), },
-        { subject: "APES", name: "Chapter 22", id: "apes_ch22", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_22.json"), },
-        { subject: "APES", name: "Chapter 23", id: "apes_ch23", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_23.json"), },
-        { subject: "APES", name: "Chapter 24", id: "apes_ch24", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_24.json"), },
-        { subject: "APES", name: "Chapter 25", id: "apes_ch25", resource: () => import("./assets/quiz/APES_Textbook_Quiz_Chapter_25.json"), },
-        { subject: "APES", name: "Review 1", id: "apes_rev1", resource: () => import("./assets/quiz/APES_Review_1.json"), },
-        { subject: "APES", name: "Review 2", id: "apes_rev2", resource: () => import("./assets/quiz/APES_Review_2.json"), },
-        { subject: "APES", name: "Review 3", id: "apes_rev3", resource: () => import("./assets/quiz/APES_Review_3.json"), },
-        { subject: "APES", name: "Final Review", id: "apes_f22", resource: () => import("./assets/quiz/APES_Final_F22.json"), },
+      { subject: "APES", name: "Circulació de la correspondència", id: "circulació_correspondencia", resource: () => import("./assets/quiz/APES_Circulacio_Correspondencia.json"), },
+        { subject: "APES", name: "Correspondència Entrada", id: "correspondencia_entrada", resource: () => import("./assets/quiz/APES_Correspondencia_Entrada.json"), },
+        { subject: "APES", name: "Correspondència Eixida", id: "correspondencia_eixida", resource: () => import("./assets/quiz/APES_Correspondencia_Eixida.json"), },
+        { subject: "APES", name: "Procediments Administració", id: "procediments_adminstracio_publica", resource: () => import("./assets/quiz/APES_Procediments_Administracio.json"), },
+        { subject: "APES", name: "Serveis Correus", id: "serveis_correus", resource: () => import("./assets/quiz/APES_Serveis_Correus.json"), },
+        { subject: "APES", name: "Administració Pública Electrònica", id: "administracio_publica_electronica", resource: () => import("./assets/quiz/APES_Administracio_Electronica.json"), },
+        { subject: "APES", name: "Normes de confidencialitat", id: "normes", resource: () => import("./assets/quiz/APES_Normes.json"), }
+       
       ],
     };
   }

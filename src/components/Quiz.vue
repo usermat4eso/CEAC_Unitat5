@@ -7,7 +7,7 @@ import { getLink } from '../main';
 <template>
     <div class="progress" v-if="questions" :style="{ width: `${(answered / questions.length) * 100}%` }"></div>
     <header v-if="!error">
-        <h1><fa-icon :icon="faListCheck" /> Web Quiz:
+        <h1><fa-icon :icon="faListCheck" /> CEAC Unitat 5:
             <span v-if="quizNames.length > 4">
                 ({{ quizNames.length }} quizzes)</span>
             <span v-else>{{ quizNames.join(", ") }}</span>
@@ -30,15 +30,15 @@ import { getLink } from '../main';
         <div class="links">
             <router-link :to="'/'" class="link-button">
                 <fa-icon :icon="faCircleArrowLeft" />
-                Back to main page
+                Torna a la pàgina principal
             </router-link>
             <a @click="checkAll()" class="link-button" v-if="!showAnswers">
                 <fa-icon :icon="faCheckCircle" />
-                Check answers
+                Comprova
             </a>
             <a @click="showAnswers = false" class="link-button" v-else>
                 <fa-icon :icon="faCircleStop" />
-                Hide answers
+                Amaga les respostes
             </a>
             <a @click="reset()" class="link-button">
                 <fa-icon :icon="faArrowsRotate" />
@@ -46,18 +46,18 @@ import { getLink } from '../main';
             </a>
             <a @click="instant = !instant" class="link-button">
                 <fa-icon :icon="instant ? faBoltLightning : faCirclePause" />
-                Answer feedback: {{ instant? "Instant": "Delayed" }}
+                Feedback: {{ instant? "Instant": "Delayed" }}
             </a>
         </div>
 
         <div v-for="(question, index) in questions" :class="['question', getQuestionClassName(question)]">
             <p class="status"
                 v-if="(instant && question.selected !== undefined && question.selected !== -1) || showAnswers">
-                <span v-if="question.selected === -1" class="blue">Not answered</span>
+                <span v-if="question.selected === -1" class="blue">No resposta</span>
                 <span v-else-if="question.selected === question.correct" class="green">Correct</span>
-                <span v-else class="red">Incorrect</span>
+                <span v-else class="red">Incorrecta</span>
             </p>
-            <p><em>Question {{ index + 1 }}:</em> {{ question.question }}</p>
+            <p><em>Pregunta {{ index + 1 }}:</em> {{ question.question }}</p>
             <div v-for="(choice, choiceIndex) in question.choices"
                 :class="['choice', getClassName(question, choiceIndex)]">
                 <input type="radio" :name="'question-' + index" v-model="question.selected" :value="choiceIndex"
@@ -68,15 +68,15 @@ import { getLink } from '../main';
         <div class="links">
             <router-link :to="'/'" class="link-button">
                 <fa-icon :icon="faCircleArrowLeft" />
-                Back to main page
+                Torna a la pàgina principal
             </router-link>
             <a @click="window.scroll(0, 0); checkAll()" class="link-button" v-if="!showAnswers">
                 <fa-icon :icon="faCheckCircle" />
-                Check answers
+                Comprova
             </a>
             <a @click="showAnswers = false" class="link-button" v-else>
                 <fa-icon :icon="faCircleStop" />
-                Hide answers
+                Amaga les respostes
             </a>
             <a @click="reset()" class="link-button">
                 <fa-icon :icon="faArrowsRotate" />
