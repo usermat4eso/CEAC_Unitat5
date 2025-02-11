@@ -37,7 +37,8 @@ export default {
         { subject: "APES", name: "Procediments Administració", id: "procediments_adminstracio_publica", resource: () => import("./assets/quiz/APES_Procediments_Administracio.json"), },
         { subject: "APES", name: "Serveis Correus", id: "serveis_correus", resource: () => import("./assets/quiz/APES_Serveis_Correus.json"), },
         { subject: "APES", name: "Administració Pública Electrònica", id: "administracio_publica_electronica", resource: () => import("./assets/quiz/APES_Administracio_Electronica.json"), },
-        { subject: "APES", name: "Normes de confidencialitat", id: "normes", resource: () => import("./assets/quiz/APES_Normes.json"), }
+        { subject: "APES", name: "Normes de confidencialitat", id: "normes", resource: () => import("./assets/quiz/APES_Normes.json"), },
+        { subject: "APES", name: "Unitat 6: Arxivament", id: "arxivament_classificacio", resource: () => import("./assets/quiz/APES_Unitat_6.json"), }
        
       ],
     };
